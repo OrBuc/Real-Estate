@@ -1,0 +1,62 @@
+/* Search.module.css
+   עיצוב דף החיפוש – סרגל סינון רספונסיבי ותצוגת תוצאות.
+*/
+
+/* כותרת וספירת תוצאות */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.resultCount {
+  font-size: 14px;
+  color: #5e6e82;
+  background: #f0f4f8;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* פס סינון עליון */
+.filters {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr; /* עמודה אחת במובייל */
+  margin: 12px 0;
+}
+@media (min-width: 768px) {
+  .filters {
+    grid-template-columns: repeat(4, 1fr);
+  } /* 4 שדות בשורה רחבה */
+}
+
+/* מצב ריק - אין תוצאות */
+.empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #5e6e82;
+}
+
+.emptyIcon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.empty h3 {
+  margin: 0 0 8px;
+  color: #0a2540;
+}
+
+.empty p {
+  margin: 0;
+  font-size: 14px;
+}

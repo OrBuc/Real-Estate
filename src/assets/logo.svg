@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a66c2"/><stop offset="100%" stop-color="#5fa2e6"/></linearGradient></defs>
+  <circle cx="90" cy="90" r="86" fill="url(#g)"/>
+  <g fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 90 L90 50 L140 90"/><path d="M55 85 V135 H125 V85"/><rect x="80" y="105" width="20" height="30" fill="#ffffff" stroke="none"/>
+  </g>
+  <text x="90" y="168" text-anchor="middle" font-family="Heebo, Arial, sans-serif" font-size="22" fill="#0a2540">נכסים בישראל</text>
+</svg>

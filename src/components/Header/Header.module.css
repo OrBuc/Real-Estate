@@ -1,0 +1,55 @@
+/* עטיפה ראשית - מסדרת את כל האלמנטים בשורה */
+.wrap {
+  display: flex;
+  align-items: center; /* יישור אנכי */
+  gap: 16px; /* ריווח בין אלמנטים */
+}
+
+/* אזור הלוגו - תמונה + טקסט */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* ריווח בין סמל לטקסט */
+}
+
+/* סמל הלוגו (תמונת SVG) */
+.brandMark {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%; /* עיגול מלא */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* צל עדין */
+}
+
+/* טקסט "נכסים בישראל" */
+.logo {
+  font-weight: 800;
+  font-size: 20px;
+  color: #0a2540;
+  white-space: nowrap; /* מונע שבירת שורה */
+}
+
+/* תפריט הניווט - קישורים מרכזיים */
+.nav {
+  display: flex;
+  gap: 20px; /* ריווח בין קישורים */
+  margin-inline: auto; /* דוחף לצד אמצע (RTL-aware) */
+}
+
+/* עיצוב כל קישור בתפריט */
+.nav a {
+  padding: 6px 4px;
+  border-radius: 8px;
+}
+
+/* אפקט hover על קישורי ניווט */
+.nav a:hover {
+  background: rgba(10, 95, 209, 0.08); /* רקע כחול עדין */
+  text-decoration: none; /* ביטול קו תחתון */
+}
+
+/* אזור המשתמש - התחברות/שם משתמש + כפתור */
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* ריווח בין אלמנטים */
+}

@@ -1,0 +1,214 @@
+/* איפוס גלובלי - box-sizing עוזר בחישובי רוחב */
+* {
+  box-sizing: border-box;
+}
+
+/* גובה מלא לאפליקציה */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* הגדרות בסיסיות לעמוד */
+body {
+  margin: 0;
+  font-family: "Heebo", system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, "Noto Sans"; /* פונט עברית ראשון */
+  direction: rtl; /* כיוון מימין לשמאל */
+  background: radial-gradient(
+      900px 300px at 110% -10%,
+      rgba(79, 190, 230, 0.12) 0%,
+      rgba(79, 190, 230, 0) 60%
+    ),
+    #f7fafc;
+  color: #0a2540;
+}
+
+/* קישורים - צבע כחול עם קו תחתון בהובר */
+a {
+  color: #0a5fd1;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* קונטיינר מרכזי - מגביל רוחב ומרכז תוכן */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* גריד כרטיסים - רספונסיבי (1/2/3 עמודות) */
+.cardGrid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr; /* מובייל: עמודה אחת */
+}
+@media (min-width: 768px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr); /* טאבלט: 2 עמודות */
+  }
+}
+@media (min-width: 1024px) {
+  .cardGrid {
+    grid-template-columns: repeat(3, 1fr); /* דסקטופ: 3 עמודות */
+  }
+}
+
+/* כפתור ראשי - כחול עם גרדיאנט ואפקטים */
+.btn {
+  background: linear-gradient(180deg, #0b72ff 0%, #0a5fd1 100%);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(10, 95, 209, 0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+.btn:hover {
+  transform: translateY(-1px); /* הרמה קלה */
+  box-shadow: 0 10px 20px rgba(10, 95, 209, 0.18);
+}
+.btn:active {
+  transform: translateY(0); /* חזרה למקום */
+  opacity: 0.95;
+}
+
+/* כפתור משני - אפור כהה */
+.btn.secondary {
+  background: linear-gradient(180deg, #0a2540 0%, #0a2e55 100%);
+  box-shadow: 0 4px 12px rgba(10, 46, 85, 0.15);
+}
+
+/* כפתור מחיקה - אדום */
+.btn.danger {
+  background: linear-gradient(180deg, #d11f1f 0%, #b71c1c 100%);
+  box-shadow: 0 4px 12px rgba(183, 28, 28, 0.18);
+}
+
+/* שדות קלט - input, select, textarea */
+.input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 12px;
+  border: 1px solid #d8e0e8;
+  border-radius: 12px;
+  background: #fff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0b72ff; /* גבול כחול בפוקוס */
+  box-shadow: 0 0 0 3px rgba(11, 114, 255, 0.12); /* הילה כחולה */
+}
+
+/* תוויות (labels) לשדות טופס */
+label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* שורת שדה בטופס */
+.formRow {
+  margin-bottom: 12px;
+}
+
+/* הודעת שגיאה - טקסט אדום קטן */
+.error {
+  color: #b00020;
+  font-size: 13px;
+}
+
+/* אזור Hero בדף הבית - רקע כחול עם גרדיאנט */
+.hero {
+  background: radial-gradient(
+      1200px 480px at 100% -10%,
+      rgba(11, 114, 255, 0.25) 0%,
+      rgba(11, 114, 255, 0) 60%
+    ),
+    linear-gradient(135deg, #0a5fd1 0%, #39c6d6 100%);
+  color: #fff;
+  border-radius: 26px;
+  padding: 56px 36px;
+  margin: 18px 0 28px;
+  box-shadow: 0 18px 36px rgba(10, 102, 194, 0.2);
+  text-align: center;
+}
+
+/* סרגל עליון - רקע לבן עם קו תחתון */
+.headerBar {
+  background: #ffffff;
+  border-bottom: 1px solid #e9eff5;
+}
+
+/* סקשן גנרי - ריווחים */
+.section {
+  margin: 22px 0;
+}
+
+/* כותרת סקשן - שורה עם כותרת וקישור */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+/* Badge לסטטוס - עיגול עם רקע כחול */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px; /* עיגול מלא */
+  font-size: 12px;
+  background: #e9f3ff;
+  color: #0a5fd1;
+  border: 1px solid #cfe5ff;
+}
+
+/* Badge למצב "נמכר" - רקע אדום */
+.badge.sold {
+  background: #ffe9e9;
+  color: #b71c1c;
+  border-color: #ffd0d0;
+}
+
+/* טקסט מחיר - כתום בולט */
+.price {
+  color: #ff7a1a;
+  font-weight: 800;
+}
+
+/* רקע Modal (Backdrop) - שכבת כיסוי שקופה */
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 37, 64, 0.7); /* שחור שקוף 70% */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* מעל כל התוכן */
+  padding: 16px;
+}
+
+/* תיבת Modal - קופסה לבנה באמצע */
+.modal {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 640px;
+  width: 100%;
+  max-height: 90vh; /* מקסימום גובה */
+  overflow-y: auto; /* גלילה אנכית אם צריך */
+  box-shadow: 0 24px 64px rgba(10, 37, 64, 0.3); /* צל עמוק */
+}

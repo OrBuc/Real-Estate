@@ -1,0 +1,12 @@
+/* Dashboard.module.css
+   עיצוב לדף הניהול – כותרת עליונה וגריד הכרטיסים יורש מ־.cardGrid הגלובלי.
+*/
+
+/* כותרת דף: שם + כפתור "הוסף נכס" בקו אחד */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between; /* דוחף את הכפתור לקצה */
+  margin: 12px 0;
+}

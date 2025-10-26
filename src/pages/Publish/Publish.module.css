@@ -1,0 +1,34 @@
+/* Publish.module.css
+   עיצוב דף "פרסם נכס" – קופסת טופס ממורכזת עם רוחב נוח לקריאה.
+*/
+
+.wrap {
+  max-width: 640px;
+  margin: 24px auto;
+  background: #fff;
+  border: 1px solid #eaeef2;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.notice {
+  text-align: center;
+  padding: 32px 16px;
+}
+
+.notice h2 {
+  margin-bottom: 12px;
+  color: #0a2540;
+}
+
+.notice p {
+  margin-bottom: 24px;
+  color: #5e6e82;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}

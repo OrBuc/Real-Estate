@@ -1,0 +1,13 @@
+/* Register.module.css
+   עיצוב קופסת הרשמה – דומה ל־Login אך מעט רחבה יותר.
+*/
+
+/* מעטפת הטופס */
+.wrap {
+  max-width: 460px;
+  margin: 24px auto;
+  background: #fff;
+  border: 1px solid #eaeef2;
+  border-radius: 12px;
+  padding: 16px;
+}

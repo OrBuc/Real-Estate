@@ -1,0 +1,32 @@
+/* LoanCalculator.module.css
+   קובץ עיצוב למחשבון ההלוואה.
+   מטרות: מסגרת לבנה, ריווחים, ורספונסיביות לשדות ותוצאות.
+*/
+
+/* עטיפת המחשבון */
+.wrap {
+  background: #fff;
+  border: 1px solid #eaeef2;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* גריד השדות – עמודה אחת במובייל, 3 עמודות בדסקטופ */
+.grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* תוצאות חישוב */
+.results {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr;
+}

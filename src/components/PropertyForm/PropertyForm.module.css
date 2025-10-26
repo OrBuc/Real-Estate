@@ -1,0 +1,28 @@
+/* PropertyForm.module.css
+   קובץ עיצוב לטופס הוספה/עריכה של נכס.
+   כולל טייטל, תצוגה מקדימה של תמונה, וסידור כפתורי פעולה.
+*/
+
+/* כותרת הטופס */
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* אזור הכפתורים (שמור/בטל) */
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap; /* רספונסיבי – שובר שורה במסכים קטנים */
+}
+
+/* תצוגת תמונה אחרי בחירה (Preview) */
+.preview {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border: 1px solid #eaeef2;
+  border-radius: 10px;
+  margin-top: 8px;
+}

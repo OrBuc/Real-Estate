@@ -1,0 +1,8 @@
+/* שורת כפתורי הפעולה ב-Hero */
+.heroActions {
+  display: flex;
+  gap: 10px; /* ריווח בין כפתורים */
+  margin-top: 16px;
+  justify-content: center; /* מרכז את הכפתורים */
+  flex-wrap: wrap; /* שבירת שורה במובייל */
+}
